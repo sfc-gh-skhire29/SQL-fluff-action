@@ -1,0 +1,15 @@
+name: "SQL linting using SQL-FLUFF"
+description: "Uses SQL fluff"
+inputs:
+  sql-root-lists: 
+    description: "A list of all paths to test"
+    required: false
+    default: "."
+  sqlfluff-command:
+      description: "Command -: lint / fix"
+      required: true
+      default: "lint"
+  extra-sqlfluff-options:
+    description: "Extra options: sqlfluff $(sqlfluff-command) $(extra-sqlfluff-options) $(sql-root-list)"
+    required: false
+    default: ""   
