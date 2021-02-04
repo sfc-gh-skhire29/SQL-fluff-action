@@ -13,3 +13,14 @@ inputs:
     description: "Extra options: sqlfluff $(sqlfluff-command) $(extra-sqlfluff-options) $(sql-root-list)"
     required: false
     default: ""   
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.sql-root-list }}
+    - ${{ inputs.sqlfluff-command }}
+    - ${{ inputs.extra-sqlfluff-options }}
+branding:
+  icon: "terminal"
+  color: "white"    
