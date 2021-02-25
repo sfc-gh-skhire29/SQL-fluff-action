@@ -18,7 +18,7 @@ runs:
   using: "docker"
   image: "Dockerfile"
   args:
-    - ${{ inputs.sql-root-list }}
+    - ${{ inputs.sql-root-lists }}
     - ${{ inputs.sqlfluff-command }}
     - ${{ inputs.extra-sqlfluff-options }}
 branding:
